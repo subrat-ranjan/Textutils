@@ -5,7 +5,7 @@ import Navbar from './component/Navbar';
 import { useEffect } from 'react';
 import './darkmode.css'
 import Alert from './component/Alert';
-
+//change
 function App() {
   const [theme, setTheme] = useState('light');
   const [alert, setAlert] = useState(null);
