@@ -45,7 +45,7 @@ export default function Navbar(props) {
 console.log(text.split(" ").length)
 
 function countWords(str) {
-  const arr = str.split(' ');
+  const arr = str.split(/\s+/);
 
   return arr.filter(word => word !== '').length;
 }
@@ -67,10 +67,10 @@ function countWords(str) {
       </div>
        <div className="container my-3">
           <h2>Your text summary</h2>
-          <p> {countWords(text)} Words and {text.length} Characters {text}</p>
+          <p> {countWords(text)} Words and {text.length} Characters</p>
           <p>{0.008 * countWords(text)} Minutes read</p>
           <h2>Preview</h2>
-          <p>{text.length>0 ? text: "Enter something in the above textbox to Preview here"}</p>
+          <p>{text.length>0 ? text : "Enter something in the above textbox to Preview here"}</p>
        </div>
 
     </>
